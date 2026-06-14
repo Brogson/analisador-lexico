@@ -4,6 +4,17 @@
 > Autores: **Leandro Grazziolin** e **Victor Toniato**
  
 ---
+
+## Comandos para rodar o código (Makefile)
+
+make -> compila o código
+make run -> executa o código
+make valgrind -> executa e verifica erros no código
+make clean -> limpa os arquivos objeto e executáveis
+make full -> compila, executa e limpa arquivos objeto e executáveis
+make valgrind-full -> compila, executa, limpa e verifica erros
+
+---
  
 ## 📖 Sobre o Projeto
  
