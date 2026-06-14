@@ -7,6 +7,9 @@ public class MaquinaMoore extends AnalisadorLexico {
     }
 
     public void s0() {
+        while (this.proximoCaractereIs(SEPARADOR)) {
+            leProxCaractere();
+        }
         if (this.proximoCaractereIs(ABREPAR)) {
             leProxCaractere();
             s1();
@@ -92,7 +95,10 @@ public class MaquinaMoore extends AnalisadorLexico {
         if (this.proximoCaractereIs(NUM)) {
             leProxCaractere();
             s7();
-        }        
+        }
+        else if (!(this.proximoCaractereIs(SEPARADOR) || this.proximoCaractereIs(EOF) || this.proximoCaractereIs(ABREPAR) || this.proximoCaractereIs(ABRECHV) || this.proximoCaractereIs(ABRECOL) || this.proximoCaractereIs(FECHAPAR) || this.proximoCaractereIs(FECHACOL) || this.proximoCaractereIs(FECHACHV) || this.proximoCaractereIs(OP))){
+            throw new ErroLexico(this.proximoCaractere, "separador ou fim de Token");
+        }
     }
     
     public void s8() {
@@ -101,6 +107,9 @@ public class MaquinaMoore extends AnalisadorLexico {
         if (this.proximoCaractereIs(RESTO_VAR)) {
             leProxCaractere();
             s8();
+        }
+        else if (!(this.proximoCaractereIs(SEPARADOR) || this.proximoCaractereIs(EOF) || this.proximoCaractereIs(ABREPAR) || this.proximoCaractereIs(ABRECHV) || this.proximoCaractereIs(ABRECOL) || this.proximoCaractereIs(FECHAPAR) || this.proximoCaractereIs(FECHACOL) || this.proximoCaractereIs(FECHACHV) || this.proximoCaractereIs(OP))){
+            throw new ErroLexico(this.proximoCaractere, "separador ou fim de Token");
         }
     }
     

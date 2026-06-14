@@ -2,7 +2,7 @@ public interface Constantes {
     enum Token {EOF, ABREPAR, FECHAPAR, ABRECOL, FECHACOL, ABRECHV, FECHACHV, NUM, VAR, OP};
 
     String EOF = "\0";
-    String ABREPAR = "(";
+    String ABREPAR = "(";   
     String FECHAPAR = ")";
     String ABRECOL = "[";
     String FECHACOL = "]";
@@ -13,4 +13,6 @@ public interface Constantes {
     String LETRAS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String RESTO_VAR = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     String OP = "+-/*";
+
+    String SEPARADOR = "\t\r\n ";
 }

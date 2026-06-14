@@ -47,6 +47,10 @@ public class AnalisadorLexico implements Constantes {
     public void leProxCaractere() {
         try {
             this.proximoCaractere = this.entrada.charAt(this.posicao);
+
+            if (this.proximoCaractere == '\n') {
+                linha++;
+            }
             posicao++;
         }
 
