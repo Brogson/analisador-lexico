@@ -7,7 +7,7 @@
 namespace Constantes {
 
     enum class Token {
-        EOF_TOKEN,
+        EOF,
         ABREPAR,
         FECHAPAR,
         ABRECOL,
