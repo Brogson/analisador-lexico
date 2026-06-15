@@ -1,3 +1,6 @@
+//Linguagens formais e autômatos - Analisador Léxico
+//Leandro Grazziotin e Victor Toniato
+
 #include "MaquinaMoore.h"
 #include "ErroLexico.h"
 
@@ -42,7 +45,7 @@ void MaquinaMoore::s0() {
         s6();
     }
 
-    else if (proximoCaractereIs(Constantes::NUM)) {
+    else if (proximoCaractereIs(Constantes::NUM_INICIO)) {
         leProxCaractere();
         s7();
     }
@@ -65,7 +68,7 @@ void MaquinaMoore::s0() {
     else {
         throw ErroLexico(
             proximoCaractere,
-            Constantes::NUM
+            Constantes::NUM_INICIO
             + Constantes::RESTO_VAR
             + Constantes::OP
             + Constantes::ABRECHV

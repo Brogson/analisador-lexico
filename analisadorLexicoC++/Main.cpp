@@ -1,3 +1,6 @@
+//Linguagens formais e autômatos - Analisador Léxico
+//Leandro Grazziotin e Victor Toniato
+
 #include <iostream>
 #include <stdexcept>
 
@@ -21,43 +24,43 @@ int main(int argc, char* argv[]) {
             switch (scanner.getTokenReconhecido()) {
 
                 case Constantes::Token::ABREPAR:
-                    std::cout << "ABREPAR";
+                    std::cout << "<ABREPAR>";
                     break;
 
                 case Constantes::Token::FECHAPAR:
-                    std::cout << "FECHAPAR";
+                    std::cout << "<FECHAPAR>";
                     break;
 
                 case Constantes::Token::ABRECOL:
-                    std::cout << "ABRECOL";
+                    std::cout << "<ABRECOL>";
                     break;
 
                 case Constantes::Token::FECHACOL:
-                    std::cout << "FECHACOL";
+                    std::cout << "<FECHACOL>";
                     break;
 
                 case Constantes::Token::ABRECHV:
-                    std::cout << "ABRECHV";
+                    std::cout << "<ABRECHV>";
                     break;
 
                 case Constantes::Token::FECHACHV:
-                    std::cout << "FECHACHV";
+                    std::cout << "<FECHACHV>";
                     break;
 
                 case Constantes::Token::NUM:
-                    std::cout << "NUM";
+                    std::cout << "<NUM>";
                     break;
 
                 case Constantes::Token::VAR:
-                    std::cout << "VAR";
+                    std::cout << "<VAR>";
                     break;
 
                 case Constantes::Token::OP:
-                    std::cout << "OP";
+                    std::cout << "<OP>";
                     break;
 
                 case Constantes::Token::EOF_TOKEN:
-                    std::cout << "EOF";
+                    std::cout << "<EOF>";
                     break;
             }
 
@@ -66,16 +69,13 @@ int main(int argc, char* argv[]) {
         } while (scanner.getTokenReconhecido()
                  != Constantes::Token::EOF_TOKEN);
 
-        std::cout << "Análise léxica do arquivo "
+        std::cout << "Análise léxica realizada com sucesso para o arquivo "
                   << scanner.getNome()
-                  << " realizada com sucesso!"
                   << std::endl;
     }
 
     catch (const ErroLexico& erro) {
-        std::cout << "============= ERRO LÉXICO ============="
-                  << std::endl
-                  << erro.what()
+        std::cout << erro.what()
                   << std::endl;
     }
 

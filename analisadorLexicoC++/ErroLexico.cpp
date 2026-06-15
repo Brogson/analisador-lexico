@@ -1,3 +1,6 @@
+//Linguagens formais e autômatos - Analisador Léxico
+//Leandro Grazziotin e Victor Toniato
+
 #include "ErroLexico.h"
 
 ErroLexico::ErroLexico(char caractereEncontrado,
@@ -30,9 +33,9 @@ ErroLexico::ErroLexico(char caractereEncontrado,
     }
 
     mensagem =
-        "Caractere não pertencente à linguagem: "
+        "Erro léxico: caractere encontrado: "
         + caractere
-        + "\nOs caracteres aceitos são: "
+        + "\nEra(m) esperado(s): " 
         + this->caracteresAceitos;
 }
 

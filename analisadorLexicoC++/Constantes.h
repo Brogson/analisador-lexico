@@ -1,3 +1,6 @@
+//Linguagens formais e autômatos - Analisador Léxico
+//Leandro Grazziotin e Victor Toniato
+
 #ifndef CONSTANTES_H
 
 #define CONSTANTES_H
@@ -7,7 +10,7 @@
 namespace Constantes {
 
     enum class Token {
-        EOF,
+        EOF_TOKEN,
         ABREPAR,
         FECHAPAR,
         ABRECOL,
@@ -28,6 +31,7 @@ namespace Constantes {
     const std::string ABRECHV = "{";
     const std::string FECHACHV = "}";
 
+    const std::string NUM_INICIO = "123456789";
     const std::string NUM = "0123456789";
 
     const std::string LETRAS =

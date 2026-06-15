@@ -1,3 +1,6 @@
+//Linguagens formais e autômatos - Analisador Léxico
+//Leandro Grazziotin e Victor Toniato
+
 #ifndef ANALISADORLEXICO_H
 
 #define ANALISADORLEXICO_H
