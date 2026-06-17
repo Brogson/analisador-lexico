@@ -160,7 +160,15 @@ void MaquinaMoore::s8() {
 }
 
 void MaquinaMoore::s9() {
-    tokenReconhecido = Constantes::Token::OP;
+    if (proximoCaractereIs(Constantes::SEPARADOR) || proximoCaractere == (Constantes::EOF_CHAR)){
+        tokenReconhecido = Constantes::Token::OP;
+    }
+    else {
+        throw ErroLexico(
+            proximoCaractere,
+            "espaço, quebra de linha ou tabulação."
+        );
+    }
 }
 
 void MaquinaMoore::s10() {
